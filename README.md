@@ -9,5 +9,13 @@ This iteration of the project began in September 2022 and is still currently in 
 The following pages have been implemented: Home/Index, Schedule
 The following pages need to be implemented: About Us, News and Reviews
 
-The following features have been implemented: Dynamic home page schedue based on current time; Dynamic weekly schedule page based on info from .txt files
-The following features need to be implemented: Search through weekly shows by title, host name, time, date; Display shows by first letter directory; submission portal for articles for News and Reviews; Home page integrated social media feed (Instagram)
+The following features have been implemented: 
+  Dynamic home page schedue based on current time
+  Dynamic weekly schedule page based on info from .txt files
+  
+The following features need to be implemented: 
+  Weekend Schedule .txt files so the page doesn't look empty/broken on weekends
+  Search through weekly shows by title, host name, time, date
+  Display shows by first letter directory
+  Submission portal for articles for News and Reviews
+  Home page integrated social media feed (Instagram)
