@@ -1,0 +1,304 @@
+/* To make sure the site fills the whole page*/
+html, body{
+    height: 100%;
+    margin: 0px;
+}
+
+/* Styling for the site background*/
+body{
+    background-color: rgb(28, 25, 31);
+    background-image: url("images/music.jpg");
+	background-size: 1706px 1066px;
+	background-position: top;
+	background-repeat: no-repeat;
+    font-family: 'Monstrat', sans-serif;
+}
+
+/* Styling for the Navigation Bar*/
+.header{
+    background-color: rgb(255, 164, 210);
+    margin: 0px;
+    padding: 5px;
+}
+
+/* Styling for the main block of content*/
+.body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* Styling for the footer*/
+.footer{
+    background-color: rgb(117, 18, 28);
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* Header Specific Styles in order of appearance/importance */
+
+    /* Put navigation of right of nav bar*/
+    .header ul{
+        margin-top:0px;
+        margin-bottom:0px;
+        float: right;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+    }
+
+    /* Instead of vertical list, horrizontal list*/
+    li{
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 0px;
+        font-size: 15pt;
+        font-weight: bold;
+    }
+
+    .text{
+        margin-top:20px;
+    }
+
+    /* Color link text*/
+    a{
+        text-decoration: none;
+        color: rgb(117, 18, 28);
+    }
+    a:hover{
+        text-decoration: none;
+        color: rgb(195, 85, 53);
+    }
+
+    /* Put logo on left of the nav bar*/
+    .header img{ 
+        float: left;
+        width: 100px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .header p{
+        clear: both;
+    }
+
+    #logo-mobile{
+        visibility: hidden;
+        width: 0px;
+        margin-top: 0px;
+    }
+    #logo{
+        visibility: visible;
+        width: 100px;
+    }
+
+/* Body Specific Styles in order of appearance/importance */
+
+    /*We are College Radio*/
+    h1, h2{
+        font-family:'Courier New', Courier, monospace;
+        background-color: white;
+        text-align: center;
+        font-weight: lighter;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1{
+        font-size: 36pt;
+        width: 55%;
+    }
+
+    h2{
+        font-size: 20pt;
+        width: 75%;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+
+    #stream{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /* Styling for the actual content*/
+    .content{
+        background-color: rgb(255, 245, 139);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        padding: 20px;
+        width: 85%;
+    }
+
+    .instagram{
+        background-color: aquamarine;
+        float: left;
+        /*margin-left: 20px;*/
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+    }
+
+    .live, .upnext{
+        width: 100%;
+        /*background-color: aquamarine;*/
+        float: left;
+    }
+
+        .row .column3 img{
+            float: right;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 20%;
+        }
+
+        .row .column1 {
+            width: 20%;
+            float: left;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 24pt;
+        }
+
+        .row .column2 h4{
+            float: right;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16pt;
+            width: 60%;
+            text-align: right;
+            padding-right: 30px;
+        }
+
+/* Styling for the Schedule Page*/
+    
+    body .body .content .schedule{
+        width: 18%;
+        padding:1%;
+        float:left;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    body .body .content .schedule img{
+        width: 100%;
+    }
+
+    body .body .content .schedule h5{
+        font-size: 25pt;
+        hyphens: auto;
+    }
+
+    hr{
+        border: 1px solid rgb(117, 18, 28);
+        clear:both;
+    }
+
+/* Footer Specific Styles in order of appearance/importance */
+
+.left{
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        text-align: left;
+        padding-left: 10%;
+}
+
+.right{
+        float: right;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        text-align: right;
+        padding-right: 10%;
+}
+
+h5{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16pt;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+p, .footer .left a{
+    font-family: 'Monstrat', sans-serif;
+    font-size: 12pt;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.footer .left a{
+    color: white;
+}
+
+.footer .left a:hover{
+    color: rgb(255, 245, 139);
+    text-decoration: underline;
+}
+
+/* CSS RULE FOR MOBILE OPTIMIZATION*/
+@media only screen and (max-width: 750px) {
+    .body{
+        width: 100%;
+    }
+    
+    .content{
+        width: 95%;
+    }
+    
+    li a{
+        font-size:12pt;
+    }
+    
+    #logo-mobile{
+        visibility: visible;
+        width: 100px;
+        
+    }
+    #logo{
+        visibility: hidden;
+        width: 0px;
+    }
+    
+    .row .column2 h4{
+        width: 45%;
+    }
+    
+    /* Styling for the Schedule Page*/
+    body .body .content .schedule{
+        width: 90%;  
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    body .body .content .schedule img{
+        width: 40%;
+        float:right;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body .body .content .schedule h5{
+        font-size: 42pt;
+        text-align: center;
+    }
+    body .body .content .schedule h3{
+        font-size: 36pt;
+        margin-bottom: 5px;
+    }
+    body .body .content .schedule h4{
+        font-size: 24pt;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    body .body .content .schedule p{
+        font-size: 16pt;
+    }
+    
+}
