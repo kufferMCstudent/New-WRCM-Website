@@ -10,6 +10,7 @@
 		<title>Schedule</title>  <!-- Tab Title -WM Uffer -->
         <link href = "images/favicon.png" rel = "icon" type = "image/gif"/> <!-- Icon in the Tab -WM Uffer -->
 		<link type = "text/CSS" rel = "stylesheet" href = "style2.css"/>
+        
 	</head>  
 
     <?php
@@ -104,6 +105,8 @@
             </br>
 
             <div class = "content">
+
+                <input type="text" id = "filterInput" placeholder="Search...">
 <?php
                 $weekdays = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
                 foreach ($weekdays as $dayof)
@@ -112,6 +115,7 @@
                     $origText = file_get_contents($DAY); //get schedule for the day
                     $information = array(); //multidimensional array that holds all of the information
                     take_in($origText);
+                    $counter = 0;
 ?>
                 <div class = "schedule">
                     <h5>
@@ -132,20 +136,42 @@
                             time_to_text($info[1]);
                             $end_time = $time_var;
 ?>
-                <h3>
-                    <?= $info[2]?>
-                </h3>
-                <img src = "images/djs/<?= $info[4]?>" alt = "<?= $info[2]?> Logo">
-                <h4>
-                    with <?= $info[3]?> </br>from <?=$start_time?> - <?=$end_time?>
-                </h4>
-                <p>
-                    <?= $info[5]?>
-                </p>
-                <hr>
-                </br>   
+                <div class = "show">
+                    <h3>
+                        <?= $info[2]?>
+                    </h3>
+<?php
+                            //need to split up which images are being lazy loaded and which ones arent.
+                            //Lazy Loading all images (starting with ones already on screen) was leading to no images being loaded
+                            if($counter > 2)
+                            {
+?>
+                    <img data-src = "images/djs/<?= $info[4]?>" alt = "<?= $info[2]?> Logo">
+<?php
+                            }
+                            else
+                            {
+?>
+                    <img src = "images/djs/<?= $info[4]?>" alt = "<?= $info[2]?> Logo">
+<?php
+                            }
+?>
+                    <h4 class = "person">
+                        with <?= $info[3]?>
+                    </h4>
+                    <h4>
+                        from <?=$start_time?> - <?=$end_time?>
+                    </h4>
+                    <p>
+                        <?= $info[5]?>
+                    </p>
+                    <hr>
+                    </br>   
 <?php
                         }
+?>
+                        </div> <!-- end of Show -->
+        <?php
                     }
 ?>
                     </div>
@@ -165,9 +191,9 @@
                     WRCM - Manhattan College Radio
                 </h5>
                 <p>
-                    <a href = "home.php">Home</a> </br>
+                    <a href = "index.php">Home</a> </br>
                     <a href = "aboutus.html">About Us</a> </br>
-                    <a href = "schedule.html">Schedule</a> </br>
+                    <a href = "schedule.php">Schedule</a> </br>
                     <a href = "news.html">News and Reviews</a> </br>
                 </p>
             </div>
@@ -184,6 +210,9 @@
             <p style = "clear: both;">
             </p>
         </div>
+
+        <script src = "searchBar.js"></script>
+        <script src = "lazyLoad.js"></script>
 
     </body>
 </html>

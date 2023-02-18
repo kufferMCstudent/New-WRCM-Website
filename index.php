@@ -69,7 +69,7 @@
                     <img id = "logo-mobile" src = "images/WRCMLogoBig.png" alt = "WRCM Logo">
                 </li>
                 <li class = "text">
-                    <a href = "home.php">Home</a>
+                    <a href = "index.php">Home</a>
                 </li>
 
                 <li class = "text">
@@ -191,7 +191,7 @@
                         </div>
                         
                         <div class = "column3">
-                            <img src = "images/djs/<?= $info[4]?>" alt = "<?= $info[2]?> Logo" width = "150">
+                            <img data-src = "images/djs/<?= $info[4]?>" alt = "<?= $info[2]?> Logo" width = "150">
                         </div>
 
                         <div class = "column2">
@@ -255,7 +255,7 @@
                     WRCM - Manhattan College Radio
                 </h5>
                 <p>
-                    <a href = "home.php">Home</a> </br>
+                    <a href = "index.php">Home</a> </br>
                     <a href = "aboutus.html">About Us</a> </br>
                     <a href = "schedule.php">Schedule</a> </br>
                     <a href = "news.php">News and Reviews</a> </br>
@@ -274,6 +274,8 @@
             <p style = "clear: both;">
             </p>
         </div>
+
+        <script src = "lazyLoad.js"></script>
 
     </body>
 </html>

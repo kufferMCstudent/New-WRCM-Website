@@ -200,6 +200,91 @@ body{
         clear:both;
     }
 
+    .content > input{
+        border: none;
+        font-size: 16pt;;
+        background-color: rgb(255, 251, 208);
+        padding: 10px;
+        width: 98%;
+    }
+
+/* About Us Specific Styles*/
+.aboutUsImg{
+    float: right;
+}
+
+.aboutUsTitle{
+    clear: both;
+}
+
+/* News and Reviews Specific Styles*/
+.newsImg{
+    width: 150px;
+    float: right;
+}
+
+.button{
+    color: white;
+    background-color: rgb(117, 18, 28);
+    border: 3px solid white;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button:hover{
+    background-color: rgb(192, 99, 108);
+}
+
+/* Submit Article Specific Styles*/
+form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+}
+
+label{
+    font-size: 16pt;
+    font-family: 'Monstrat', sans-serif;
+    font-weight: bold;
+}
+
+input, #article{
+    border: none;
+    background-color: rgb(255, 251, 208);
+    padding: 10px;
+    width: 30%;
+}
+
+#article{
+    background-color: none;
+}
+#submit{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16pt;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(117, 18, 28);
+    border: 3px solid white;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit:hover{
+    background-color: rgb(192, 99, 108);
+}
+
+.submit-conf{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 /* Footer Specific Styles in order of appearance/importance */
 
 .left{
@@ -300,5 +385,89 @@ p, .footer .left a{
     body .body .content .schedule p{
         font-size: 16pt;
     }
+
+    .content > input{
+        width: 90%;
+    }
+
+    /* Styling for the News and Reviews Page*/
+    .button{
+        width: 60%;
+    }
+
+    .button > h5{
+        color: white;
+        font-size: 36pt;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .body{
+        width: 100%;
+    }
     
+    .content{
+        width: 95%;
+    }
+    
+    li a{
+        font-size:12pt;
+    }
+    
+    #logo-mobile{
+        visibility: visible;
+        width: 100px;
+        
+    }
+    #logo{
+        visibility: hidden;
+        width: 0px;
+    }
+    
+    .row .column2 h4{
+        width: 45%;
+    }
+    
+    /* Styling for the Schedule Page*/
+    body .body .content .schedule{
+        width: 90%;  
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    body .body .content .schedule img{
+        width: 40%;
+        float:right;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body .body .content .schedule h5, body .body .content h3{
+        font-size: 42pt;
+        text-align: center;
+    }
+    body .body .content .schedule h3, body .body .content h4{
+        font-size: 36pt;
+        margin-bottom: 5px;
+    }
+    body .body .content .schedule h4{
+        font-size: 24pt;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    body .body .content .schedule p{
+        font-size: 16pt;
+    }
+
+    .content > input{
+        width: 90%;
+    }
+
+    /* Styling for the News and Reviews Page*/
+    a.button{
+        width: 60%;
+    } 
+    a.button > h5{
+        color: white;
+        font-size: 36pt;
+    }
 }
